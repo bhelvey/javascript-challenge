@@ -22,14 +22,14 @@ button.on("click", function() {
     // Get the value of the input
     var inputValue = inputElement.property("value");
     // Filter Data with your prefernce of variables equal to input value
-    var filtData = tableData.filter(event => event.datetime === inputValue ||
-                                                    event.city === inputValue ||
-                                                    event.state === inputValue ||
-                                                    event.country === inputValue ||
-                                                    event.shape === inputValue );
+    var filtData = tableData.filter(sighting => sighting.datetime === inputValue ||
+                                                    sighting.city === inputValue ||
+                                                    sighting.state === inputValue ||
+                                                    sighting.country === inputValue ||
+                                                    sighting.shape === inputValue );
     // console.log filter values
     console.log(filtData);
-    filtData.forEach(function(selections) {
+    filtData.forEach(selections => {
         console.log(selections);
         // Append one table row `tr` for each UFO Sighting object
         var row = tbody.append("tr");
